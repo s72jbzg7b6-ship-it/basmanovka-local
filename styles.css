@@ -2799,23 +2799,6 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 }
 
-@keyframes menu-scroll-rail-glide {
-  0% {
-    background-position: 110% 0;
-    opacity: 0.68;
-  }
-
-  48% {
-    background-position: 50% 0;
-    opacity: 1;
-  }
-
-  100% {
-    background-position: -10% 0;
-    opacity: 0.72;
-  }
-}
-
 @media (max-width: 760px) {
   :root {
     --container: min(100vw - 28px, 100%);
@@ -2911,32 +2894,20 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .nav::after {
     content: "";
-    flex: 0 0 34px;
-    height: 1px;
-  }
-
-  .topbar__inner::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 6px;
+    order: 1;
+    flex: 0 0 78px;
     width: 78px;
     height: 4px;
-    transform: translateX(-50%);
+    align-self: center;
+    margin: 0 2px;
     border-radius: 999px;
-    background: linear-gradient(
-      90deg,
-      rgba(71, 211, 203, 0.2) 0%,
-      rgba(71, 211, 203, 0.2) 30%,
-      rgba(71, 211, 203, 0.98) 44%,
-      rgba(71, 211, 203, 0.98) 56%,
-      rgba(71, 211, 203, 0.2) 70%,
-      rgba(71, 211, 203, 0.2) 100%
-    );
-    background-size: 220% 100%;
+    background: linear-gradient(90deg, rgba(71, 211, 203, 0.18), rgba(71, 211, 203, 0.95), rgba(71, 211, 203, 0.18));
     box-shadow: 0 0 0 1px rgba(71, 211, 203, 0.08), 0 8px 18px rgba(0, 0, 0, 0.18);
-    animation: menu-scroll-rail-glide 2s ease-in-out infinite;
     pointer-events: none;
+  }
+
+  .nav > :nth-child(n + 4) {
+    order: 2;
   }
 
   .nav__link,
