@@ -399,6 +399,7 @@ p {
   z-index: 1;
   width: min(64%, 310px);
   object-fit: contain;
+  transform: translateY(clamp(16px, 2.4vw, 30px));
 }
 
 .section {
@@ -2845,6 +2846,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .hero__flower {
     width: min(74%, 260px);
+    transform: translateY(34px);
   }
 
   .section {
