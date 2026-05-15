@@ -2799,28 +2799,49 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 }
 
-@keyframes nav-scroll-cue-flow {
-  0% {
-    background-position: 140% 0, 0 0;
-  }
-
-  100% {
-    background-position: -40% 0, 0 0;
-  }
-}
-
 @media (max-width: 760px) {
   :root {
     --container: min(100vw - 28px, 100%);
   }
 
   .topbar__inner {
+    --nav-cue-offset: 0px;
+    --nav-cue-track-size: 138px;
+    --nav-cue-thumb-size: 58px;
     position: relative;
     width: 100%;
     padding: 12px 14px 15px;
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 10px 14px;
+  }
+
+  .topbar__inner::before,
+  .topbar__inner::after {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    height: 4px;
+    border-radius: 999px;
+    pointer-events: none;
+  }
+
+  .topbar__inner::after {
+    left: 50%;
+    z-index: 1;
+    width: var(--nav-cue-track-size);
+    transform: translateX(-50%);
+    background: rgba(71, 211, 203, 0.18);
+    box-shadow: 0 0 0 1px rgba(71, 211, 203, 0.08), 0 8px 18px rgba(0, 0, 0, 0.14);
+  }
+
+  .topbar__inner::before {
+    left: calc(50% - 69px + var(--nav-cue-offset));
+    z-index: 2;
+    width: var(--nav-cue-thumb-size);
+    background: linear-gradient(90deg, rgba(38, 196, 188, 0.78), rgba(38, 196, 188, 1));
+    box-shadow: 0 0 14px rgba(38, 196, 188, 0.2);
+    transition: left 180ms ease;
   }
 
   .brand__mark {
@@ -2886,7 +2907,6 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 
   .nav {
-    position: relative;
     grid-column: 1 / -1;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -2901,22 +2921,6 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .nav::-webkit-scrollbar {
     display: none;
-  }
-
-  .nav::after {
-    content: "";
-    position: absolute;
-    left: 222px;
-    bottom: 7px;
-    width: 88px;
-    height: 4px;
-    border-radius: 999px;
-    background:
-      linear-gradient(90deg, transparent 0 32%, rgba(71, 211, 203, 0.98) 50%, transparent 68%) 0 0 / 190% 100% no-repeat,
-      linear-gradient(90deg, rgba(71, 211, 203, 0.14), rgba(71, 211, 203, 0.48), rgba(71, 211, 203, 0.14));
-    box-shadow: 0 0 0 1px rgba(71, 211, 203, 0.08), 0 8px 18px rgba(0, 0, 0, 0.18);
-    animation: nav-scroll-cue-flow 1.7s ease-in-out infinite;
-    pointer-events: none;
   }
 
   .nav__link,
