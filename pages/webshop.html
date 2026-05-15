@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вебшоп — Basmanovka.by – Цветы и растения оптом</title>
+    <meta
+      name="description"
+      content="Вебшоп Basmanovka.by в разработке: готовим отдельный интернет-магазин с каталогом, фильтрами и удобным оформлением заказов."
+    />
+    <meta name="theme-color" content="#12b7b0" />
+    <script>
+      (() => {
+        const media = window.matchMedia("(prefers-color-scheme: dark)");
+        const applyTheme = () => {
+          document.documentElement.dataset.theme = media.matches ? "dark" : "light";
+        };
+        applyTheme();
+        if (media.addEventListener) media.addEventListener("change", applyTheme);
+        else media.addListener(applyTheme);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="icon" type="image/png" href="../assets/favicon.png?v=20260425-user-icon" />
+    <link rel="stylesheet" href="../styles.css?v=20260425-cropped-icons" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand-title" href="../index.html">Basmanovka.by</a>
+          <a class="brand-marklink" href="../index.html" aria-label="АллюрФлор">
+            <img
+              class="brand__mark"
+              src="../assets/logo-main.png"
+              alt="АллюрФлор"
+              width="711"
+              height="711"
+              decoding="async"
+            />
+          </a>
+          <div class="topbar__meta">
+            <div class="socials" aria-label="Социальные сети">
+              <a class="socials__link" href="https://www.instagram.com/allyurflor/" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+              </a>
+              <a class="socials__link" href="https://t.me/+gRPEEa1G59xjMmMy" aria-label="Telegram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 4 3 11.5l7 2.5L19 6l-7 8 0 6 3.3-4 3.7 2z"></path>
+                </svg>
+              </a>
+              <a class="socials__link socials__link--tiktok" href="https://www.tiktok.com/@allyurflor" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15.5 3c.5 1.7 1.6 3 3.5 3.6V9a7.4 7.4 0 0 1-3.7-1v6.6a5.1 5.1 0 1 1-5.1-5.1c.4 0 .8 0 1.2.1V12a2.7 2.7 0 1 0 1.5 2.4V3h2.6z"></path>
+                </svg>
+              </a>
+            </div>
+            <a class="phone-pill" href="tel:+375447296433" aria-label="Позвонить">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 4h4l2 5-2.5 1.7a15 15 0 0 0 4.8 4.8L15 13l5 2v4a2 2 0 0 1-2.2 2A17 17 0 0 1 3 6.2 2 2 0 0 1 5 4z"></path>
+              </svg>
+              <span>+375 (44) 729-64-33</span>
+            </a>
+          </div>
+          <nav class="nav" aria-label="Основная навигация">
+            <a class="nav__link" href="../index.html">Главная</a>
+            <a class="nav__link" href="../index.html#contacts">Контакты</a>
+            <a class="nav__link" href="../pages/cut-flowers.html">Срезанные цветы</a>
+            <a class="nav__link" href="../pages/potted-plants.html">Горшечные растения</a>
+            <a class="nav__link" href="../pages/packaging.html">Упаковочные материалы</a>
+            <a class="nav__cta nav__link--active" href="../pages/webshop.html">Вебшоп</a>
+          </nav>
+        </div>
+      </header>
+      <main id="main-content">
+        <section class="page-hero">
+          <div class="page-hero__box">
+            <h1>Вебшоп в разработке</h1>
+            <p>
+              Здесь появится отдельный интернет-магазин с каталогом, фильтрами,
+              карточками товаров и удобным оформлением заказа.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="notice">
+            <strong>Сейчас ведутся работы</strong>
+            Мы готовим полноценный вебшоп для быстрого выбора ассортимента и удобной
+            работы с заказами. Пока можно познакомиться с основными направлениями на главной странице.
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__grid">
+            <div>
+              <h3>Обратная связь</h3>
+              <h4>Адрес склада / почтовый адрес</h4>
+              <p>
+                <a class="footer__address-link" href="https://yandex.com/maps/-/CPaqQ-yP" target="_blank" rel="noopener noreferrer">
+                  <span class="footer__address-line">223411 Минская обл., Узденский р-н,</span>
+                  <span class="footer__address-line">д. Басмановка, ул. Сказочная 1А</span>
+                </a>
+              </p>
+              <p>(22 км от МКАД в направлении Слуцка)</p>
+              <h4>Склад в Басмановке</h4>
+              <p><a href="tel:+375445690890">+375 (44) 569-08-90</a></p>
+              <h4>Отдел продаж</h4>
+              <p><a href="mailto:zakazcvet01@gmail.com">zakazcvet01@gmail.com</a></p>
+              <h4>Менеджер по продажам (опт)</h4>
+              <p><a href="tel:+375447296433">+375 (44) 729-64-33</a></p>
+            </div>
+            <div class="footer__map" aria-labelledby="footer-map-title">
+              <div class="footer__map-card">
+                <h3 id="footer-map-title">Склад на карте</h3>
+                <div class="footer__map-frame">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?z=12&amp;ol=biz&amp;oid=133978154204"
+                    title="Склад Basmanovka.by на карте"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="footer__rating" aria-label="Рейтинг организации в Яндексе">
+                  <p class="footer__rating-label">Рейтинг в Яндексе</p>
+                  <div class="footer__rating-badge footer__rating-badge--light">
+                    <iframe
+                      src="https://yandex.ru/sprav/widget/rating-badge/133978154204?type=rating"
+                      title="Светлый бейдж рейтинга Basmanovka.by в Яндексе"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                  <div class="footer__rating-badge footer__rating-badge--dark">
+                    <iframe
+                      src="https://yandex.ru/sprav/widget/rating-badge/133978154204?type=rating&amp;theme=dark"
+                      title="Тёмный бейдж рейтинга Basmanovka.by в Яндексе"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>Реквизиты</h3>
+              <ul>
+                <li>ООО «АллюрФлор»</li>
+                <li>УНП: 193607285</li>
+                <li>Юридический адрес: г. Минск, ул. Калиновского, д. 111 А, ком. 312</li>
+                <li>Бухгалтерия: <a href="tel:+375445378070">+375-44-537-80-70</a></li>
+                <li><a href="mailto:basmanovka1a@gmail.com">basmanovka1a@gmail.com</a></li>
+              </ul>
+              <div class="footer__socials" aria-label="Социальные сети">
+                <a class="socials__link" href="https://www.instagram.com/allyurflor/" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="17.5" cy="6.5" r="1"></circle>
+                  </svg>
+                </a>
+                <a class="socials__link" href="https://t.me/+gRPEEa1G59xjMmMy" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 4 3 11.5l7 2.5L19 6l-7 8 0 6 3.3-4 3.7 2z"></path>
+                  </svg>
+                </a>
+                <a class="socials__link socials__link--tiktok" href="https://www.tiktok.com/@allyurflor" aria-label="TikTok">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 3c.5 1.7 1.6 3 3.5 3.6V9a7.4 7.4 0 0 1-3.7-1v6.6a5.1 5.1 0 1 1-5.1-5.1c.4 0 .8 0 1.2.1V12a2.7 2.7 0 1 0 1.5 2.4V3h2.6z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__meta">
+            <a href="../pages/about.html">О компании</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  </html>
