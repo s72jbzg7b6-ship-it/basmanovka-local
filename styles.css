@@ -2970,6 +2970,10 @@ html[data-theme="dark"] .footer__socials .socials__link {
     padding-top: 20px;
   }
 
+  .section--categories {
+    display: none;
+  }
+
   .construction {
     padding: 20px 0 24px;
   }
