@@ -413,6 +413,10 @@ p {
     z-index: 2;
   }
 
+  .hero__eyebrow {
+    transform: translateY(clamp(-22px, -1.1vw, -16px));
+  }
+
   .hero__visual {
     align-self: stretch;
     min-height: 0;
@@ -425,7 +429,7 @@ p {
     bottom: 0;
     width: auto;
     max-width: none;
-    height: min(calc(100% + 67px), 559px);
+    height: min(calc(100% + 30px), 520px);
   }
 }
 
