@@ -3046,7 +3046,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
     width: auto;
     max-width: none;
     height: 85%;
-    transform: none;
+    transform: translateX(clamp(24px, 8vw, 38px));
   }
 
   .section {
