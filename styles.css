@@ -3227,7 +3227,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
   .footer__map-frame {
     border: 0.5px solid rgba(255, 255, 255, 0.12);
     border-radius: 10px;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
   }
 
   .footer__map-link {
