@@ -2628,14 +2628,14 @@ html[data-theme="dark"] .footer__socials .socials__link {
   background: linear-gradient(145deg, #119f9e, #17b8b0);
   color: white;
   border-radius: 34px;
-  padding: 28px;
+  padding: 22px 24px 24px;
   box-shadow: var(--shadow);
 }
 
 .footer__grid {
   display: grid;
   grid-template-columns: minmax(0, 0.96fr) minmax(336px, 426px) minmax(0, 0.92fr);
-  gap: 24px;
+  gap: 20px;
   align-items: start;
 }
 
@@ -2654,7 +2654,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
 }
 
 .footer h4 {
-  margin-top: 18px;
+  margin-top: 12px;
   font-size: 1.05rem;
 }
 
@@ -2662,7 +2662,11 @@ html[data-theme="dark"] .footer__socials .socials__link {
 .footer li,
 .footer a {
   color: rgba(255, 255, 255, 0.96);
-  line-height: 1.55;
+  line-height: 1.34;
+}
+
+.footer p {
+  margin: 7px 0 0;
 }
 
 .footer__address-link {
@@ -2687,18 +2691,18 @@ html[data-theme="dark"] .footer__socials .socials__link {
 .footer ul {
   list-style: none;
   padding: 0;
-  margin: 12px 0 0;
+  margin: 8px 0 0;
 }
 
 .footer li + li {
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 .footer__socials {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .footer__socials .socials__link {
@@ -2795,12 +2799,12 @@ html[data-theme="dark"] .footer__socials .socials__link {
 }
 
 .footer__meta {
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
   color: rgba(255, 255, 255, 0.78);
 }
 
