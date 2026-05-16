@@ -2968,7 +2968,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
   .hero__panel {
     border-radius: 28px;
     grid-template-columns: 1fr;
-    min-height: clamp(560px, 145vw, 620px);
+    min-height: clamp(476px, 123vw, 527px);
     align-items: stretch;
   }
 
