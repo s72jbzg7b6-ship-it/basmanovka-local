@@ -2715,7 +2715,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
 .footer__map-card {
   width: min(100%, 404px);
   margin-inline: 0 auto;
-  padding: 12px;
+  padding: 10px;
   border-radius: 26px;
   text-align: center;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
@@ -2725,7 +2725,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
 }
 
 .footer__map-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: 1.08rem;
 }
 
@@ -2734,7 +2734,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: rgba(7, 26, 31, 0.12);
-  aspect-ratio: 1.12 / 1;
+  aspect-ratio: 4 / 3;
 }
 
 .footer__map-frame iframe {
@@ -2759,10 +2759,10 @@ html[data-theme="dark"] .footer__socials .socials__link {
 }
 
 .footer__rating {
-  margin-top: 10px;
+  margin-top: 8px;
   display: grid;
   justify-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .footer__rating-label {
