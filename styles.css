@@ -2673,6 +2673,13 @@ html[data-theme="dark"] .footer__socials .socials__link {
   display: block;
 }
 
+.footer__grid > div:first-child a:not(.socials__link),
+.footer__grid > div:first-child .footer__address-line {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
 .footer ul {
   list-style: none;
   padding: 0;
