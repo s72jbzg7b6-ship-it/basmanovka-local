@@ -405,7 +405,7 @@ p {
 @media (min-width: 1101px) {
   .hero__panel {
     align-items: stretch;
-    min-height: clamp(580px, 42vw, 640px);
+    min-height: clamp(493px, 35.7vw, 544px);
   }
 
   .hero__content {
@@ -425,7 +425,7 @@ p {
     bottom: 0;
     width: auto;
     max-width: none;
-    height: min(calc(100% + 88px), 730px);
+    height: min(calc(100% + 75px), 621px);
   }
 }
 
