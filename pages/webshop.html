@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Вебшоп — Basmanovka.by – Цветы и растения оптом</title>
+    <title>Вкусные цены — вебшоп Basmanovka.by</title>
     <meta
       name="description"
-      content="Вебшоп Basmanovka.by в разработке: готовим отдельный интернет-магазин с каталогом, фильтрами и удобным оформлением заказов."
+      content="B2B вебшоп «Вкусные цены»: каталог цветов и растений, клиентские цены, корзина и оформление заказа для оптовых покупателей Basmanovka.by."
     />
     <meta name="theme-color" content="#12b7b0" />
     <script>
@@ -27,8 +27,9 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
     />
     <link rel="icon" type="image/png" href="../assets/favicon.png?v=20260425-user-icon" />
-    <link rel="stylesheet" href="../styles.css?v=20260526-tasty-prices-nav" />
+    <link rel="stylesheet" href="../styles.css?v=20260526-webshop" />
     <script src="../js/nav-scroll-indicator.js?v=20260515-centered-progress" defer></script>
+    <script src="../js/webshop.js?v=20260526-webshop" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержанию</a>
@@ -79,28 +80,140 @@
             <a class="nav__link" href="../pages/cut-flowers.html">Срезанные цветы</a>
             <a class="nav__link" href="../pages/potted-plants.html">Горшечные растения</a>
             <a class="nav__link" href="../pages/packaging.html">Упаковочные материалы</a>
-            <a class="nav__cta" href="../pages/webshop.html" aria-label="Вкусные цены">
+            <a class="nav__cta nav__cta--active" href="../pages/webshop.html" aria-label="Вкусные цены">
               <img class="nav__cta-logo" src="../assets/tasty-prices.png" alt="Вкусные цены" />
             </a>
           </nav>
         </div>
       </header>
       <main id="main-content">
-        <section class="page-hero">
-          <div class="page-hero__box">
-            <h1>Вебшоп в разработке</h1>
-            <p>
-              Здесь появится отдельный интернет-магазин с каталогом, фильтрами,
-              карточками товаров и удобным оформлением заказа.
-            </p>
+        <section
+          class="webshop-page"
+          data-webshop-root
+          data-api-base=""
+          aria-labelledby="webshop-title"
+        >
+          <div class="webshop-hero">
+            <div class="webshop-hero__content">
+              <span class="webshop-kicker">B2B каталог для оптовых клиентов</span>
+              <img
+                class="webshop-hero__logo"
+                src="../assets/tasty-prices.png"
+                alt="Вкусные цены"
+                width="640"
+                height="240"
+                decoding="async"
+              />
+              <h1 id="webshop-title">Выбирайте товары и оформляйте заказ онлайн</h1>
+              <p>
+                Каталог показывает актуальную поставку, клиентские цены после входа,
+                кратность упаковки и корзину с быстрым оформлением заказа.
+              </p>
+              <div class="webshop-hero__actions">
+                <button class="webshop-button webshop-button--primary" type="button" data-webshop-focus-login>
+                  Войти клиенту
+                </button>
+                <a class="webshop-button webshop-button--ghost" href="https://t.me/+gRPEEa1G59xjMmMy">
+                  Получить доступ
+                </a>
+              </div>
+            </div>
+            <div class="webshop-hero__panel" aria-label="Преимущества вебшопа">
+              <div class="webshop-stat">
+                <strong data-webshop-total>—</strong>
+                <span>позиций в активном каталоге</span>
+              </div>
+              <div class="webshop-stat">
+                <strong data-webshop-delivery>—</strong>
+                <span>ближайшая поставка</span>
+              </div>
+              <div class="webshop-stat">
+                <strong>24/7</strong>
+                <span>доступ к заказу и истории</span>
+              </div>
+            </div>
           </div>
-        </section>
 
-        <section class="section">
-          <div class="notice">
-            <strong>Сейчас ведутся работы</strong>
-            Мы готовим полноценный вебшоп для быстрого выбора ассортимента и удобной
-            работы с заказами. Пока можно познакомиться с основными направлениями на главной странице.
+          <div class="webshop-status" data-webshop-status role="status" aria-live="polite">
+            <strong>Подключаем каталог</strong>
+            Загружаем данные вебшопа и проверяем доступ.
+          </div>
+
+          <div class="webshop-layout">
+            <aside class="webshop-sidebar" aria-label="Вход и корзина">
+              <section class="webshop-panel webshop-panel--login">
+                <div class="webshop-panel__head">
+                  <div>
+                    <span class="webshop-kicker">Доступ</span>
+                    <h2>Кабинет клиента</h2>
+                  </div>
+                  <button class="webshop-button webshop-button--ghost webshop-session-logout" type="button" data-webshop-logout hidden>
+                    Выйти
+                  </button>
+                </div>
+                <form class="webshop-login" data-webshop-login>
+                  <label>
+                    <span>Логин</span>
+                    <input autocomplete="username" name="login" required />
+                  </label>
+                  <label>
+                    <span>Пароль</span>
+                    <input autocomplete="current-password" name="password" required type="password" />
+                  </label>
+                  <button class="webshop-button webshop-button--primary" type="submit">Войти</button>
+                </form>
+                <div class="webshop-session" data-webshop-session hidden>
+                  <span>Вы вошли как</span>
+                  <strong data-webshop-session-name></strong>
+                </div>
+                <p class="webshop-panel__note">
+                  Если логина ещё нет, напишите менеджеру. После входа откроются ваши цены,
+                  остатки и оформление заказа.
+                </p>
+              </section>
+
+              <section class="webshop-panel webshop-cart" aria-label="Корзина">
+                <div class="webshop-panel__head">
+                  <div>
+                    <span class="webshop-kicker">Заказ</span>
+                    <h2>Корзина</h2>
+                  </div>
+                  <strong data-webshop-cart-total>0 BYN</strong>
+                </div>
+                <div class="webshop-cart__items" data-webshop-cart-items>
+                  <p class="webshop-empty">Корзина пуста</p>
+                </div>
+                <button class="webshop-button webshop-button--primary webshop-checkout" type="button" data-webshop-checkout disabled>
+                  Подтвердить заказ
+                </button>
+              </section>
+            </aside>
+
+            <section class="webshop-catalog" aria-label="Каталог вебшопа">
+              <div class="webshop-toolbar">
+                <label class="webshop-search">
+                  <span class="sr-only">Поиск по каталогу</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="6.3"></circle>
+                    <path d="m15.4 15.4 4.1 4.1"></path>
+                  </svg>
+                  <input data-webshop-search placeholder="Поиск по каталогу..." type="search" />
+                </label>
+                <div class="webshop-toolbar__meta">
+                  <span data-webshop-count>— товаров</span>
+                </div>
+              </div>
+
+              <div class="webshop-categories" data-webshop-categories aria-label="Категории">
+                <button class="webshop-category webshop-category--active" type="button" data-category="">Все</button>
+              </div>
+
+              <div class="webshop-products" data-webshop-products>
+                <div class="webshop-skeleton"></div>
+                <div class="webshop-skeleton"></div>
+                <div class="webshop-skeleton"></div>
+              </div>
+            </section>
           </div>
         </section>
       </main>
