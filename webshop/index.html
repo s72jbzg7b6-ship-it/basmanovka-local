@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="theme-color"
+      content="#FFFFFF"
+    />
+    <meta
+      name="color-scheme"
+      content="light"
+    />
+    <meta
+      name="apple-mobile-web-app-capable"
+      content="yes"
+    />
+    <meta
+      name="mobile-web-app-capable"
+      content="yes"
+    />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="default"
+    />
+    <style>
+      html[data-route='catalog'],
+      html[data-route='catalog'] body,
+      html[data-route='catalog'] #root {
+        background: #ffffff;
+        background-color: #ffffff;
+        color-scheme: light;
+      }
+    </style>
+    <script>
+      if (window.location.pathname.replace(/\/+$/, '').endsWith('/catalog')) {
+        document.documentElement.dataset.route = 'catalog';
+        document.documentElement.classList.add('route-catalog');
+      }
+    </script>
+    <link
+      href="/webshop/brand/favicon.png"
+      rel="icon"
+      type="image/png"
+    />
+    <title>Вкусные цены</title>
+    <script type="module" crossorigin src="/webshop/assets/index-c63233ff.js"></script>
+    <link rel="modulepreload" crossorigin href="/webshop/assets/vendor-react-abc83e78.js">
+    <link rel="modulepreload" crossorigin href="/webshop/assets/vendor-2ecdca4b.js">
+    <link rel="modulepreload" crossorigin href="/webshop/assets/vendor-query-b27e98e7.js">
+    <link rel="modulepreload" crossorigin href="/webshop/assets/vendor-router-e2eee858.js">
+    <link rel="stylesheet" href="/webshop/assets/index-391479b5.css">
+  </head>
+  <body>
+    <script>
+      if (window.location.pathname.replace(/\/+$/, '').endsWith('/catalog')) {
+        document.body.classList.add('route-catalog');
+      }
+    </script>
+    <div id="root"></div>
+    
+  </body>
+</html>

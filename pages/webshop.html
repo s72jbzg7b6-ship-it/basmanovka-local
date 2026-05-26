@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Вебшоп — Basmanovka.by – Цветы и растения оптом</title>
+    <title>Вкусные цены — переход в вебшоп</title>
     <meta
       name="description"
-      content="Вебшоп Basmanovka.by в разработке: готовим отдельный интернет-магазин с каталогом, фильтрами и удобным оформлением заказов."
+      content="Переход в отдельный B2B вебшоп «Вкусные цены» для клиентов Basmanovka.by."
     />
     <meta name="theme-color" content="#12b7b0" />
     <script>
@@ -29,6 +29,9 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png?v=20260425-user-icon" />
     <link rel="stylesheet" href="../styles.css?v=20260526-tasty-prices-nav" />
     <script src="../js/nav-scroll-indicator.js?v=20260515-centered-progress" defer></script>
+    <script>
+      window.location.replace("/webshop/catalog");
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержанию</a>
@@ -79,7 +82,7 @@
             <a class="nav__link" href="../pages/cut-flowers.html">Срезанные цветы</a>
             <a class="nav__link" href="../pages/potted-plants.html">Горшечные растения</a>
             <a class="nav__link" href="../pages/packaging.html">Упаковочные материалы</a>
-            <a class="nav__cta" href="../pages/webshop.html" aria-label="Вкусные цены">
+            <a class="nav__cta" href="/webshop/catalog" aria-label="Вкусные цены">
               <img class="nav__cta-logo" src="../assets/tasty-prices.png" alt="Вкусные цены" />
             </a>
           </nav>
@@ -88,19 +91,21 @@
       <main id="main-content">
         <section class="page-hero">
           <div class="page-hero__box">
-            <h1>Вебшоп в разработке</h1>
+            <h1>Открываем «Вкусные цены»</h1>
             <p>
-              Здесь появится отдельный интернет-магазин с каталогом, фильтрами,
-              карточками товаров и удобным оформлением заказа.
+              Вебшоп открывается отдельной страницей. Если переход не произошёл
+              автоматически, нажмите кнопку ниже.
             </p>
+            <div class="hero__actions">
+              <a class="button button--solid" href="/webshop/catalog">Открыть вебшоп</a>
+            </div>
           </div>
         </section>
 
         <section class="section">
           <div class="notice">
-            <strong>Сейчас ведутся работы</strong>
-            Мы готовим полноценный вебшоп для быстрого выбора ассортимента и удобной
-            работы с заказами. Пока можно познакомиться с основными направлениями на главной странице.
+            <strong>Доступ только для клиентов</strong>
+            Цены, остатки и оформление заказа доступны после входа в клиентский кабинет.
           </div>
         </section>
       </main>

@@ -1,0 +1,1 @@
+import{j as e}from"./vendor-react-abc83e78.js";const s={CANCELLED:"Отменён",CONFIRMED:"Подтверждён",NEW:"Новый",PROCESSED:"Обработан"};function o({status:r}){return e.jsx("span",{className:`order-status-badge order-status-badge--${r.toLowerCase()}`,children:s[r]??r})}export{o as O};
