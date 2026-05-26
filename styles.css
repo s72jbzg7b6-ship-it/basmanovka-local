@@ -252,12 +252,19 @@ p {
   border: 1px solid rgba(18, 183, 176, 0.35);
   background: linear-gradient(135deg, rgba(235, 249, 248, 0.98), rgba(210, 247, 244, 0.94));
   box-shadow: 0 10px 24px rgba(18, 183, 176, 0.22);
+  line-height: 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .nav__cta-logo {
   width: 108px;
   max-width: none;
   height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
   transform: translateY(1px);
 }
 
