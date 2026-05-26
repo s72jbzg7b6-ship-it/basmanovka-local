@@ -1,8 +1,14 @@
 {
-  "rewrites": [
+  "redirects": [
+    {
+      "source": "/webshop",
+      "destination": "https://tasty-webshop.onrender.com/webshop/catalog",
+      "permanent": false
+    },
     {
       "source": "/webshop/:path*",
-      "destination": "/webshop/index.html"
+      "destination": "https://tasty-webshop.onrender.com/webshop/:path*",
+      "permanent": false
     }
   ]
 }

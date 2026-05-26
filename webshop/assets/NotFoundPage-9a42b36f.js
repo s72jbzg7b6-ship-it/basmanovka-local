@@ -1,1 +1,0 @@
-import{j as o}from"./vendor-react-abc83e78.js";import{P as t}from"./PageScaffold-62c9520f.js";import{L as r}from"./vendor-router-e2eee858.js";function n(){return o.jsx(t,{description:"Маршрут не найден.",title:"404",children:o.jsx(r,{to:"/catalog",children:"Перейти в каталог"})})}export{n as default};
