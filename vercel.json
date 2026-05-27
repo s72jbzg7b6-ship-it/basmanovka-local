@@ -2,12 +2,12 @@
   "redirects": [
     {
       "source": "/webshop",
-      "destination": "https://tasty-webshop.onrender.com/webshop/catalog",
+      "destination": "https://catalog.basmanovka.by/webshop/catalog",
       "permanent": false
     },
     {
       "source": "/webshop/:path*",
-      "destination": "https://tasty-webshop.onrender.com/webshop/:path*",
+      "destination": "https://catalog.basmanovka.by/webshop/:path*",
       "permanent": false
     }
   ]
