@@ -193,9 +193,25 @@ p {
   stroke-linejoin: round;
 }
 
-.socials__link--tiktok svg {
-  fill: currentColor;
-  stroke: none;
+.socials__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask: var(--social-icon) center / contain no-repeat;
+  -webkit-mask: var(--social-icon) center / contain no-repeat;
+}
+
+.socials__icon--instagram {
+  --social-icon: url("assets/social-instagram.svg");
+}
+
+.socials__icon--telegram {
+  --social-icon: url("assets/social-telegram.svg");
+}
+
+.socials__icon--tiktok {
+  --social-icon: url("assets/social-tiktok.svg");
 }
 
 .phone-pill {
@@ -2877,6 +2893,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .topbar__inner {
     --nav-cue-offset: 0px;
+    --nav-cue-track-start: -69px;
     --nav-cue-track-size: 138px;
     --nav-cue-thumb-size: 58px;
     position: relative;
@@ -2907,12 +2924,14 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 
   .topbar__inner::before {
-    left: calc(50% - 69px + var(--nav-cue-offset));
+    left: calc(50% + var(--nav-cue-track-start));
     z-index: 2;
     width: var(--nav-cue-thumb-size);
+    transform: translate3d(var(--nav-cue-offset), 0, 0);
     background: linear-gradient(90deg, rgba(38, 196, 188, 0.78), rgba(38, 196, 188, 1));
     box-shadow: 0 0 14px rgba(38, 196, 188, 0.2);
-    transition: left 180ms ease;
+    transition: none;
+    will-change: transform;
   }
 
   .brand__mark {
@@ -2950,6 +2969,11 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 
   .socials__link svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .socials__icon {
     width: 19px;
     height: 19px;
   }

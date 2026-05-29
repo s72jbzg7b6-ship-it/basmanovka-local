@@ -4,36 +4,43 @@
     if (!shell) return;
 
     let frame = 0;
+    let maxScroll = 0;
+    let maxOffset = 0;
 
-    const sync = () => {
-      frame = 0;
-
-      const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
+    const syncPosition = () => {
       const progress = maxScroll > 0 ? nav.scrollLeft / maxScroll : 0;
-      const styles = getComputedStyle(shell);
-      const trackSize = parseFloat(styles.getPropertyValue("--nav-cue-track-size")) || 138;
-      const thumbSize = parseFloat(styles.getPropertyValue("--nav-cue-thumb-size")) || 58;
-      const maxOffset = Math.max(0, trackSize - thumbSize);
       const offset = Math.min(maxOffset, Math.max(0, progress * maxOffset));
 
       shell.style.setProperty("--nav-cue-offset", `${offset.toFixed(2)}px`);
     };
 
-    const requestSync = () => {
-      if (frame) return;
-      frame = requestAnimationFrame(sync);
+    const syncMetrics = () => {
+      frame = 0;
+
+      const styles = getComputedStyle(shell);
+      const trackSize = parseFloat(styles.getPropertyValue("--nav-cue-track-size")) || 138;
+      const thumbSize = parseFloat(styles.getPropertyValue("--nav-cue-thumb-size")) || 58;
+
+      maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
+      maxOffset = Math.max(0, trackSize - thumbSize);
+      syncPosition();
     };
 
-    sync();
-    nav.addEventListener("scroll", requestSync, { passive: true });
-    window.addEventListener("resize", requestSync);
+    const requestMetricsSync = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(syncMetrics);
+    };
+
+    syncMetrics();
+    nav.addEventListener("scroll", syncPosition, { passive: true });
+    window.addEventListener("resize", requestMetricsSync);
 
     if (document.fonts?.ready) {
-      document.fonts.ready.then(requestSync);
+      document.fonts.ready.then(requestMetricsSync);
     }
 
     if ("ResizeObserver" in window) {
-      const observer = new ResizeObserver(requestSync);
+      const observer = new ResizeObserver(requestMetricsSync);
       observer.observe(nav);
       Array.from(nav.children).forEach((item) => observer.observe(item));
     }
