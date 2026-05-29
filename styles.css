@@ -762,6 +762,27 @@ p {
   stroke-linejoin: round;
 }
 
+.advantage__mark {
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: #178d87;
+  mask: var(--advantage-icon) center / contain no-repeat;
+  -webkit-mask: var(--advantage-icon) center / contain no-repeat;
+}
+
+.advantage__mark--shield {
+  --advantage-icon: url("assets/advantage-shield.svg");
+}
+
+.advantage__mark--delivery {
+  --advantage-icon: url("assets/advantage-delivery.svg");
+}
+
+.advantage__mark--thumb {
+  --advantage-icon: url("assets/advantage-thumb.svg");
+}
+
 .advantage h3 {
   margin: 0;
   font-size: 1.5rem;
@@ -3178,6 +3199,11 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 
   .advantage__icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .advantage__mark {
     width: 30px;
     height: 30px;
   }
