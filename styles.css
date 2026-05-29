@@ -222,6 +222,19 @@ p {
   font-weight: 700;
 }
 
+.phone-pill__icon {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  background: var(--teal-deep);
+  mask: url("assets/phone.svg") center / contain no-repeat;
+  -webkit-mask: url("assets/phone.svg") center / contain no-repeat;
+}
+
+.phone-pill__text {
+  min-width: 0;
+}
+
 .phone-pill svg {
   width: 18px;
   height: 18px;
@@ -2989,13 +3002,14 @@ html[data-theme="dark"] .footer__socials .socials__link {
     white-space: nowrap;
   }
 
+  .phone-pill__icon,
   .phone-pill svg {
     flex: 0 0 auto;
     width: 15px;
     height: 15px;
   }
 
-  .phone-pill span {
+  .phone-pill__text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
