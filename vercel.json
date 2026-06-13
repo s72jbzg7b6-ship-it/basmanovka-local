@@ -2,12 +2,12 @@
   "redirects": [
     {
       "source": "/webshop",
-      "destination": "https://catalog.basmanovka.by/webshop/catalog",
+      "destination": "/catalog",
       "permanent": false
     },
     {
       "source": "/webshop/:path*",
-      "destination": "https://catalog.basmanovka.by/webshop/:path*",
+      "destination": "/catalog/:path*",
       "permanent": false
     }
   ]
