@@ -310,8 +310,10 @@ p {
   color: var(--text);
   display: grid;
   gap: 2px;
+  justify-items: stretch;
   min-height: 52px;
   padding: 9px 18px;
+  text-align: right;
   text-decoration: none;
   transition: 180ms ease;
   white-space: nowrap;
@@ -329,13 +331,17 @@ p {
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 800;
+  justify-self: stretch;
   letter-spacing: 0.04em;
+  text-align: right;
   text-transform: uppercase;
 }
 
 .phone-menu__number {
   font-size: 0.94rem;
   font-weight: 800;
+  justify-self: stretch;
+  text-align: right;
 }
 
 .nav {
