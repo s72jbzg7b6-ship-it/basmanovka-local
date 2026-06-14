@@ -231,6 +231,39 @@ p {
   -webkit-mask: url("assets/phone.svg") center / contain no-repeat;
 }
 
+.phone-menu__trigger .phone-pill__icon {
+  animation: phone-vibrate 2.8s ease-in-out infinite;
+  transform-origin: 50% 78%;
+}
+
+@keyframes phone-vibrate {
+  0%,
+  72%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-12deg);
+  }
+
+  78% {
+    transform: rotate(10deg);
+  }
+
+  81% {
+    transform: rotate(-8deg);
+  }
+
+  84% {
+    transform: rotate(6deg);
+  }
+
+  87% {
+    transform: rotate(0deg);
+  }
+}
+
 .phone-pill__text {
   min-width: 0;
 }
@@ -253,16 +286,27 @@ p {
   align-items: center;
   background: var(--surface-soft);
   border: 1px solid rgba(18, 183, 176, 0.18);
-  border-radius: 50%;
+  border-radius: 999px;
   box-shadow: 0 10px 24px rgba(10, 53, 57, 0.08);
   color: var(--teal-deep);
   cursor: pointer;
   display: inline-flex;
+  gap: 7px;
   height: 42px;
   justify-content: center;
   list-style: none;
+  padding: 0 14px;
   transition: 180ms ease;
-  width: 42px;
+  width: auto;
+}
+
+.phone-menu__trigger-text {
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: lowercase;
+  white-space: nowrap;
 }
 
 .phone-menu__trigger::-webkit-details-marker {
@@ -3039,7 +3083,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
     --nav-cue-thumb-size: 58px;
     position: relative;
     width: 100%;
-    padding: 13px 14px 18px;
+    padding: 13px 14px 9px;
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 11px 14px;
@@ -3047,32 +3091,8 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .topbar__inner::before,
   .topbar__inner::after {
-    content: "";
-    position: absolute;
-    bottom: 7px;
-    height: 4px;
-    border-radius: 999px;
-    pointer-events: none;
-  }
-
-  .topbar__inner::after {
-    left: 50%;
-    z-index: 1;
-    width: var(--nav-cue-track-size);
-    transform: translateX(-50%);
-    background: rgba(71, 211, 203, 0.18);
-    box-shadow: 0 0 0 1px rgba(71, 211, 203, 0.08), 0 8px 18px rgba(0, 0, 0, 0.14);
-  }
-
-  .topbar__inner::before {
-    left: calc(50% + var(--nav-cue-track-start));
-    z-index: 2;
-    width: var(--nav-cue-thumb-size);
-    transform: translate3d(var(--nav-cue-offset), 0, 0);
-    background: linear-gradient(90deg, rgba(38, 196, 188, 0.78), rgba(38, 196, 188, 1));
-    box-shadow: 0 0 14px rgba(38, 196, 188, 0.2);
-    transition: none;
-    will-change: transform;
+    content: none;
+    display: none;
   }
 
   .brand__mark {
@@ -3136,7 +3156,13 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .phone-menu__trigger {
     height: 38px;
-    width: 38px;
+    gap: 6px;
+    padding: 0 12px;
+    width: auto;
+  }
+
+  .phone-menu__trigger-text {
+    font-size: 0.74rem;
   }
 
   .phone-menu__panel {
@@ -3164,14 +3190,16 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 
   .nav {
+    align-items: center;
     grid-column: 1 / -1;
     justify-content: flex-start;
     flex-wrap: nowrap;
     gap: 10px;
     width: calc(100% + 28px);
     margin: 0 -14px;
-    padding: 3px 14px 21px;
+    padding: 3px 14px 4px;
     overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -3182,6 +3210,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .nav__link,
   .nav__cta {
+    align-self: center;
     flex: 0 0 auto;
     padding: 10px 14px;
     font-size: 0.98rem;
@@ -3196,6 +3225,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
 
   .nav__cta-logo {
     width: 98px;
+    transform: none;
   }
 
   .hero__panel {
