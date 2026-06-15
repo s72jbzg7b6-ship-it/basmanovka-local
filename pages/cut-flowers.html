@@ -27,8 +27,9 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
     />
     <link rel="icon" type="image/png" href="../assets/favicon.png?v=20260425-user-icon" />
-    <link rel="stylesheet" href="../styles.css?v=20260614-mobile-nav-align" />
+    <link rel="stylesheet" href="../styles.css?v=20260615-phone-menu-centered" />
     <script src="../js/nav-scroll-indicator.js?v=20260529-nav-cue-direct" defer></script>
+    <script src="../js/phone-menu.js?v=20260614-close-outside" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Перейти к содержанию</a>
@@ -58,10 +59,22 @@
                 <span class="socials__icon socials__icon--tiktok" aria-hidden="true"></span>
               </a>
             </div>
-            <a class="phone-pill" href="tel:+375296019142" aria-label="Позвонить">
-              <span class="phone-pill__icon" aria-hidden="true"></span>
-              <span class="phone-pill__text">+375 (29) 601-91-42</span>
-            </a>
+            <details class="phone-menu">
+              <summary class="phone-menu__trigger" aria-label="Позвонить">
+                <span class="phone-pill__icon" aria-hidden="true"></span>
+                <span class="phone-menu__trigger-text">позвонить</span>
+              </summary>
+              <div class="phone-menu__panel" aria-label="Телефоны">
+                <a class="phone-menu__card" href="tel:+375445690890">
+                  <span class="phone-menu__label">Узнать наличие на складе</span>
+                  <span class="phone-menu__number">+375 (44) 569-08-90</span>
+                </a>
+                <a class="phone-menu__card" href="tel:+375296019142">
+                  <span class="phone-menu__label">менеджер(опт)</span>
+                  <span class="phone-menu__number">+375 (29) 601-91-42</span>
+                </a>
+              </div>
+            </details>
           </div>
           <nav class="nav" aria-label="Основная навигация">
             <a class="nav__link" href="../index.html">Главная</a>

@@ -301,11 +301,16 @@ p {
 }
 
 .phone-menu__trigger-text {
+  align-items: center;
   color: var(--text);
-  font-size: 0.78rem;
+  display: inline-grid;
+  font-size: 1.13rem;
   font-weight: 800;
+  height: 100%;
+  justify-items: center;
   line-height: 1;
-  text-transform: lowercase;
+  place-items: center;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -3162,7 +3167,7 @@ html[data-theme="dark"] .footer__socials .socials__link {
   }
 
   .phone-menu__trigger-text {
-    font-size: 0.74rem;
+    font-size: 1.07rem;
   }
 
   .phone-menu__panel {
@@ -3196,11 +3201,13 @@ html[data-theme="dark"] .footer__socials .socials__link {
     flex-wrap: nowrap;
     gap: 10px;
     width: calc(100% + 28px);
-    margin: 0 -14px;
-    padding: 3px 14px 4px;
+    margin: -5px -14px -22px;
+    padding: 8px 14px 30px;
     overflow-x: auto;
     overflow-y: hidden;
+    position: relative;
     scrollbar-width: none;
+    z-index: 2;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -3221,6 +3228,8 @@ html[data-theme="dark"] .footer__socials .socials__link {
     width: 120px;
     height: 46px;
     padding: 5px 12px;
+    position: relative;
+    z-index: 1;
   }
 
   .nav__cta-logo {
